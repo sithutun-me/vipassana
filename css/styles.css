@@ -1,0 +1,212 @@
+*{
+  font-family: 'Padauk', sans-serif;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+*.focus,*.active,*.visited{
+  outline: none;
+  box-shadow: none;
+}
+h1.text-center{
+  font-size: 8vw;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+p.text-center{
+  font-size: .7em;
+  margin: 5px;
+}
+button:focus,button:active,button:visited{
+  border: none;
+  outline: none; 
+}
+.input-group{
+  padding:10px 10px 0 10px;
+}
+
+#myInput:focus{
+  box-shadow: none;
+  outline: none;
+  border-color: #fff;
+}
+#search{
+  cursor: pointer;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+div.text{
+  width: 70%;
+  position: relative;
+  float: left;
+}
+div.list-group-item i{
+  position: relative;
+  float: right;
+}
+@media (prefers-color-scheme: light) {
+  body{
+    font-size: 1.2em;
+    background-color: #eeeeee;
+  }
+  .list-group-item.list-group-item-action{
+    background-color: #fff;
+  }
+  .list-group-item.list-group-item-action:hover,
+  .list-group-item.list-group-item-action:focus{
+    background-color: #ffffff;
+  }
+  .list-group-item.list-group-item-action.active{
+    background-color: #ddd;
+    color: #000000;
+  }
+  #myInput{
+    background-color: #fff;
+    border-color: #555;
+  }
+  .overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+}
+/* Music Screen */
+
+.overlay .close {
+  width: 100%;
+  color: #11ff55!important;
+  position: absolute;
+  bottom: 10px;
+  font-size: 14vw;
+  text-align: center;
+  font-weight: lighter;
+}
+@keyframes mymove {
+  from {bottom: 500px;}
+  to {top: 0px;}
+}
+
+@media (prefers-color-scheme: dark) {
+  body{
+    font-size: 1.2em;
+    background-color: #222222;
+    color: white;
+  }
+  .list-group-item.list-group-item-action{
+    background-color: #000000;
+    color: #fff;
+  }
+  
+  .list-group-item.list-group-item-action:hover,
+  .list-group-item.list-group-item-action:focus{
+    background-color: #000000;
+    color: #ffffff;
+  }
+  .list-group-item.list-group-item-action.active{
+    background-color: #111111;
+    border: 1px solid black;
+  }
+  #myInput{
+    background-color: #222222;
+    border-color: #eee;
+  }
+  .overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #555555;
+  font-size: ၁em;
+  text-align: center;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #222222;
+  color: #ff0000;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}

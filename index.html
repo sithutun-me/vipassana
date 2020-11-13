@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ဆရာကြီးဦးကြင်ရွှေ၏ဝိပဿနာတရားတော်များ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" rel="stylesheet">
+</head>
+
+<body class="noselect">
+  <div class="bg">
+    <h1 class="text-center">ပခုက္ကူ ဝိပဿနာသင်တန်း</h1>
+    <p class="text-center">ဝိပဿနာနည်းပြ ဆရာကြီး ဦးကြင်ရွေ ဟောကြားတော်မူသော တရားတော်များ စုစည်းမှု (MP3)</p>
+    <div class="input-group my-3">
+      <input type="text" class="form-control" placeholder="တရားတော် အမည်ရိုက်ရှာပါ ..." id="myInput"
+        onkeyup="myFunction()">
+      <div class="input-group-append">
+        <span class="input-group-text material-icons" id="search">search</span>
+      </div>
+    </div>
+    <div class="container-fluid" id="main-content">
+    </div>
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="close" aria-label="Close" onclick="closeNav()"><span
+          aria-hidden="true">&times;</span></a>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>ချိတ်ဆက်မှုပြတ်တောက်</h2>
+        </div>
+        <div class="modal-body">
+          <p>အင်တာနက်ချိတ်ဆက်မှုပြတ်တောက်သွားပါသည်...</p>
+          <p>တဖန်ပြန်၍ချိတ်ပါ...</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/ajax-utils.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
