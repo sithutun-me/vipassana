@@ -46,6 +46,9 @@ div.text{
   width: 90%;
   position: relative;
   float: left;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 div.list-group-item i{
   position: relative;
