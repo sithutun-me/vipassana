@@ -43,7 +43,7 @@ button:focus,button:active,button:visited{
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 div.text{
-  width: 70%;
+  width: 80%;
   position: relative;
   float: left;
 }
