@@ -1,76 +1,92 @@
-*{
+* {
   font-family: 'Padauk', sans-serif;
   margin: 0;
   padding: 0;
   border: none;
 }
-*.focus,*.active,*.visited{
+
+*.focus, *.active, *.visited {
   outline: none;
   box-shadow: none;
 }
-h1.text-center{
+
+h1.text-center {
   font-size: 8vw;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.2);
 }
-p.text-center{
+
+p.text-center {
   font-size: .7em;
   margin: 5px;
 }
-button:focus,button:active,button:visited{
+
+button:focus, button:active, button:visited {
   border: none;
-  outline: none; 
-}
-.input-group{
-  padding:10px 10px 0 10px;
+  outline: none;
 }
 
-#myInput:focus{
+.input-group {
+  padding: 10px 10px 0 10px;
+}
+
+#myInput:focus {
   box-shadow: none;
   outline: none;
   border-color: #fff;
 }
-#search{
+
+#search {
   cursor: pointer;
 }
+
 .noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
-div.text{
-  width: 90%;
+
+div.text {
+  width: 70%;
   position: relative;
   float: left;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-div.list-group-item i{
+
+div.list-group-item i {
   position: relative;
   float: right;
 }
+
 @media (prefers-color-scheme: light) {
-  body{
+  body {
     font-size: 1.2em;
     background-color: #eeeeee;
   }
-  .list-group-item.list-group-item-action{
+  .list-group-item.list-group-item-action {
+    font-size: .8em;
     background-color: #fff;
   }
-  .list-group-item.list-group-item-action:hover,
-  .list-group-item.list-group-item-action:focus{
+  .list-group-item.list-group-item-action:hover, .list-group-item.list-group-item-action:focus {
     background-color: #ffffff;
   }
-  .list-group-item.list-group-item-action.active{
+  .list-group-item.list-group-item-action.active {
     background-color: #ddd;
     color: #000000;
   }
-  #myInput{
+  #myInput {
     background-color: #fff;
     border-color: #555;
   }
@@ -78,52 +94,37 @@ div.list-group-item i{
     height: 0;
     width: 100%;
     position: fixed;
-    z-index: 2;
+    z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(255,255,255);
-    background-color: rgba(255,255,255, 0.9);
+    background-color: rgb(255, 255, 255);
     overflow-x: hidden;
     transition: 0.5s;
   }
 }
+
 /* Music Screen */
 
-.overlay .close {
-  width: 100%;
-  color: #11ff55!important;
-  position: absolute;
-  bottom: 10px;
-  font-size: 14vw;
-  text-align: center;
-  font-weight: lighter;
-}
-@keyframes mymove {
-  from {bottom: 500px;}
-  to {top: 0px;}
-}
-
 @media (prefers-color-scheme: dark) {
-  body{
+  body {
     font-size: 1.2em;
     background-color: #222222;
     color: white;
   }
-  .list-group-item.list-group-item-action{
+  .list-group-item.list-group-item-action {
+    font-size: .8em;
     background-color: #000000;
     color: #fff;
   }
-  
-  .list-group-item.list-group-item-action:hover,
-  .list-group-item.list-group-item-action:focus{
+  .list-group-item.list-group-item-action:hover, .list-group-item.list-group-item-action:focus {
     background-color: #000000;
     color: #ffffff;
   }
-  .list-group-item.list-group-item-action.active{
+  .list-group-item.list-group-item-action.active {
     background-color: #111111;
     border: 1px solid black;
   }
-  #myInput{
+  #myInput {
     background-color: #222222;
     border-color: #eee;
   }
@@ -131,33 +132,71 @@ div.list-group-item i{
     height: 0;
     width: 100%;
     position: fixed;
-    z-index: 2;
+    z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
+    background-color: rgb(0, 0, 0);
     overflow-x: hidden;
     transition: 0.5s;
   }
 }
 
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+  z-index: 1;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.sticky+.content {
+  padding-top: 60px;
+}
+
+.overlay .close {
+  width: 100%;
+  color: #ff3333!important;
+  position: absolute;
+  bottom: 15px;
+  text-align: center;
+  font-weight: lighter;
+}
 
 /* The Modal (background) */
+
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
 /* Modal Content */
+
 .modal-content {
   position: relative;
   background-color: #555555;
@@ -167,7 +206,7 @@ div.list-group-item i{
   padding: 0;
   border: 1px solid #888;
   width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
@@ -175,41 +214,146 @@ div.list-group-item i{
 }
 
 /* Add Animation */
+
 @-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
-  to {top:0; opacity:1}
+  from {
+    top: -300px;
+    opacity: 0
+  }
+  to {
+    top: 0;
+    opacity: 1
+  }
 }
 
 @keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
+  from {
+    top: -300px;
+    opacity: 0
+  }
+  to {
+    top: 0;
+    opacity: 1
+  }
 }
 
-/* The Close Button */
-.close {
-  color: white;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+/* Using flex with the column direction to 
+   align items in a vertical direction */
+
+.player {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
+.details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.track-art {
+  margin: 0 20px 20px 20px;
+  height: 200px;
+  width: 200px;
+  background-image: URL("../images/uks1.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 15%;
+}
+
+/* Changing the font sizes to suitable ones */
+
+.track-name {
+  font-size: 2rem;
+}
+
+/* Using flex with the row direction to 
+     align items in a horizontal direction */
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.playpause-track, .prev-track, .next-track {
+  padding: 25px;
+  opacity: 0.8;
+  /* Smoothly transition the opacity */
+  transition: opacity .2s;
+}
+
+/* Change the opacity when mouse is hovered */
+
+.playpause-track:hover, .prev-track:hover, .next-track:hover {
+  opacity: 1.0;
+}
+
+/* Define the slider width so that it scales properly */
+
+.slider_container {
+  width: 75%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modify the appearance of the slider */
+
+.seek_slider, .volume_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: #11ff55;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/* Modify the appearance of the slider thumb */
+
+.seek_slider::-webkit-slider-thumb, .volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #11ff55;
   cursor: pointer;
+  border-radius: 50%;
 }
 
-.modal-header {
-  padding: 2px 16px;
-  background-color: #222222;
-  color: #ff0000;
+/* Change the opacity when mouse is hovered */
+
+.seek_slider:hover, .volume_slider:hover {
+  opacity: 1.0;
 }
 
-.modal-body {padding: 2px 16px;}
+.seek_slider {
+  width: 60%;
+}
 
-.modal-footer {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
+.volume_slider {
+  width: 30%;
+}
+
+.current-time, .total-duration {
+  padding: 10px;
+}
+
+i.fa-volume-down, i.fa-volume-up {
+  padding: 10px;
+}
+
+/* Change the mouse cursor to a pointer 
+     when hovered over */
+
+i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
+  cursor: pointer;
 }

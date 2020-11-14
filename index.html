@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" rel="stylesheet">
 </head>
@@ -17,7 +18,7 @@
   <div class="bg">
     <h1 class="text-center">ပခုက္ကူ ဝိပဿနာသင်တန်း</h1>
     <p class="text-center">ဝိပဿနာနည်းပြ ဆရာကြီး ဦးကြင်ရွေ ဟောကြားတော်မူသော တရားတော်များ စုစည်းမှု (MP3)</p>
-    <div class="input-group my-3">
+    <div id="navbar" class="input-group py-3">
       <input type="text" class="form-control" placeholder="တရားတော် အမည်ရိုက်ရှာပါ ..." id="myInput"
         onkeyup="myFunction()">
       <div class="input-group-append">
@@ -27,8 +28,45 @@
     <div class="container-fluid" id="main-content">
     </div>
     <div id="myNav" class="overlay">
-      <a href="javascript:void(0)" class="close" aria-label="Close" onclick="closeNav()"><span
-          aria-hidden="true">&times;</span></a>
+      <div class="player"> 
+  
+        <!-- Define the section for displaying details -->
+        <div class="details"> 
+          <div class="track-art"></div> 
+          <div class="track-name">Track Name</div> 
+        </div> 
+      
+        <!-- Define the section for displaying track buttons -->
+        <div class="buttons"> 
+          <div class="prev-track" onclick="prevTrack()"> 
+            <i class="fa fa-step-backward fa-2x"></i> 
+          </div> 
+          <div class="playpause-track" onclick="playpauseTrack()"> 
+            <i class="fa fa-play-circle fa-5x"></i> 
+          </div> 
+          <div class="next-track" onclick="nextTrack()"> 
+            <i class="fa fa-step-forward fa-2x"></i> 
+          </div> 
+        </div> 
+      
+        <!-- Define the section for displaying the seek slider-->
+        <div class="slider_container"> 
+          <div class="current-time">00:00</div> 
+          <input type="range" min="1" max="100"
+            value="0" class="seek_slider" onchange="seekTo()"> 
+          <div class="total-duration">00:00</div> 
+        </div> 
+      
+        <!-- Define the section for displaying the volume slider-->
+        <div class="slider_container"> 
+          <i class="fa fa-volume-down"></i> 
+          <input type="range" min="1" max="100"
+            value="99" class="volume_slider" onchange="setVolume()"> 
+          <i class="fa fa-volume-up"></i> 
+        </div> 
+      </div> 
+      <div href="javascript:void(0)" class="close material-icons" onclick="closeNav()">drag_handle
+      </div>
     </div>
     <!-- The Modal -->
     <div id="myModal" class="modal">
