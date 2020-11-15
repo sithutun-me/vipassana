@@ -5,11 +5,6 @@
   border: none;
 }
 
-*.focus, *.active, *.visited {
-  outline: none;
-  box-shadow: none;
-}
-
 h1.text-center {
   font-size: 8vw;
   padding: 10px;
@@ -153,7 +148,7 @@ div.list-group-item i {
 
 .sticky {
   position: fixed;
-  bottom: 0;
+  top: 0;
   width: 100%;
 }
 
@@ -167,7 +162,6 @@ div.list-group-item i {
   position: absolute;
   bottom: 15px;
   text-align: center;
-  font-weight: lighter;
 }
 
 /* The Modal (background) */
@@ -200,7 +194,7 @@ div.list-group-item i {
 .modal-content {
   position: relative;
   background-color: #555555;
-  font-size: ၁em;
+  font-size: 1em;
   text-align: center;
   margin: auto;
   padding: 0;
@@ -256,19 +250,19 @@ div.list-group-item i {
 }
 
 .track-art {
-  margin: 0 20px 20px 20px;
   height: 200px;
   width: 200px;
   background-image: URL("../images/uks1.png");
-  background-size: cover;
   background-position: center;
+  background-size: cover;
   border-radius: 15%;
 }
 
 /* Changing the font sizes to suitable ones */
 
 .track-name {
-  font-size: 2rem;
+  margin-top: 30px;
+  font-size: 1.4rem;
 }
 
 /* Using flex with the row direction to 
@@ -296,7 +290,8 @@ div.list-group-item i {
 /* Define the slider width so that it scales properly */
 
 .slider_container {
-  width: 75%;
+  font-size: .9em;
+  width: 100%;
   max-width: 400px;
   display: flex;
   justify-content: center;
@@ -309,7 +304,7 @@ div.list-group-item i {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 5px;
+  height: 3px;
   background: #11ff55;
   opacity: 0.7;
   -webkit-transition: .2s;
@@ -322,8 +317,8 @@ div.list-group-item i {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   background: #11ff55;
   cursor: pointer;
   border-radius: 50%;

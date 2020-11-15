@@ -5,7 +5,7 @@ var sticky = navbar.offsetTop;
 
 function myFunction1() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+    navbar.classList.add("sticky");
   } else {
     navbar.classList.remove("sticky");
   }
@@ -31,11 +31,9 @@ function myFunction() {
 }
 //Filter End--------
 function openNav() {
-  document.getElementById("myNav").style.height = "100%";
+  document.getElementById("player_layout").style.height = "100%";
 }
-function closeNav() {
-  document.getElementById("myNav").style.height = "0%";
-}
+
 var myModal = document.getElementById('myModal');
 myModal.addEventListener("click",function(e){
   myModal.style.display="none";
@@ -70,7 +68,8 @@ myModal.addEventListener("click",function(e){
   var dhmma = {};
 
   var homeHtmlUrl = "snippets/home-snippet.html";
-  var allCatagoriesUrl = "categories.json";
+  var playerUrl = "snippets/player_layout.html";
+  var allCatagoriesUrl = "categories.json?id=";
   // Convenience function for inserting innerHTML for 'select'
   var insertHtml = function (selector, html) {
     var targetElem = document.querySelector(selector);
@@ -142,6 +141,18 @@ myModal.addEventListener("click",function(e){
             $(modal).show();
           }
         });
+        $('.text').on('click', function () {
+          
+          var playerview = $(this).parent().parent().find('.overlay').get(0);
+          console.log(playerview);
+          $(playerview).css("height","100%");
+        });
+        $('.close').on('click', function () {
+          var playerview = $(this).parent().parent().find('.overlay').get(0);
+          console.log(playerview);
+          $(playerview).css("height","0%");
+        });
+        
       },
       false);
   }
@@ -156,7 +167,6 @@ myModal.addEventListener("click",function(e){
       var html = homeHtmlUrl;
 
       var id = "" + categories[i].id;
-      global.$id = id;
       var sname = "" + categories[i].sname;
       var name = "" + categories[i].name;
       var link = "" + categories[i].link;

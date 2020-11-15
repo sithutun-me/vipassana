@@ -1,9 +1,48 @@
 <div class="list-group my-1">
-    <div class="list-group-item list-group-item-action" id="{{id}}">
-        <div class="text" onclick="openNav()">
-        <span class="float-left">{{sname}} {{name}}</span></div>
-        <i class="mytoggle material-icons float-right" id="play">play_arrow</i></div>
-    
+    <div class="list-group-item list-group-item-action">
+        <div class="text" id="{{id}}">
+            <span class="float-left">{{sname}} {{name}}</span></div>
+        <i class="mytoggle material-icons float-right" id="play">play_arrow</i>
+    </div>
+    <div id="player_layout" class="overlay" id="{{id}}">
+        <div class="player">
+
+            <!-- Define the section for displaying details -->
+            <div class="details">
+                <div class="track-art"></div>
+                <div class="track-name"> {{name}} </div>
+            </div>
+
+            <!-- Define the section for displaying track buttons -->
+            <div class="buttons">
+                <div class="prev-track" onclick="prevTrack()">
+                    <i class="fa fa-step-backward fa-1x"></i>
+                </div>
+                <div class="playpause-track" onclick="playpauseTrack()">
+                    <i class="fa fa-play-circle fa-3x"></i>
+                </div>
+                <div class="next-track" onclick="nextTrack()">
+                    <i class="fa fa-step-forward fa-1x"></i>
+                </div>
+            </div>
+
+            <!-- Define the section for displaying the seek slider-->
+            <div class="slider_container">
+                <div class="current-time">00:00</div>
+                <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                <div class="total-duration">00:00</div>
+            </div>
+
+            <!-- Define the section for displaying the volume slider-->
+            <div class="slider_container">
+                <i class="fa fa-volume-down"></i>
+                <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                <i class="fa fa-volume-up"></i>
+            </div>
+        </div>
+        <div href="javascript:void(0)" class="close material-icons">drag_handle
+        </div>
+    </div>
     <audio id="my-audio" preload="none">
         <source src="{{link}}" type="audio/mpeg">
     </audio>
