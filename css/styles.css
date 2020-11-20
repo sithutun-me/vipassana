@@ -16,13 +16,10 @@ p.text-center {
   margin: 5px;
 }
 
-button:focus, button:active, button:visited {
-  border: none;
-  outline: none;
-}
+
 
 .input-group {
-  padding: 10px 10px 0 10px;
+  padding: 0;
 }
 
 #myInput:focus {
@@ -59,8 +56,12 @@ div.text {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
+div.list-group-item{
+  border: none;
+  outline: none;
+}
 div.list-group-item i {
+  right: -8px;
   position: relative;
   float: right;
 }
@@ -70,9 +71,17 @@ div.list-group-item i {
     font-size: 1.2em;
     background-color: #eeeeee;
   }
+  #navbar {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: #eee;
+    z-index: 1;
+  }
   .list-group-item.list-group-item-action {
     font-size: .8em;
     background-color: #fff;
+    border-radius: 7px;
   }
   .list-group-item.list-group-item-action:hover, .list-group-item.list-group-item-action:focus {
     background-color: #ffffff;
@@ -106,10 +115,18 @@ div.list-group-item i {
     background-color: #222222;
     color: white;
   }
+  #navbar {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: #333;
+    z-index: 1;
+  }
   .list-group-item.list-group-item-action {
     font-size: .8em;
     background-color: #000000;
     color: #fff;
+    border-radius: 7px;
   }
   .list-group-item.list-group-item-action:hover, .list-group-item.list-group-item-action:focus {
     background-color: #000000;
@@ -127,19 +144,13 @@ div.list-group-item i {
     height: 0;
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
     background-color: rgb(0, 0, 0);
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: .5s;
   }
-}
-
-#navbar {
-  overflow: hidden;
-  background-color: #333;
-  z-index: 1;
 }
 
 .content {
@@ -188,47 +199,14 @@ div.list-group-item i {
   background-color: rgba(0, 0, 0, 0.4);
   /* Black w/ opacity */
 }
-
-/* Modal Content */
-
-.modal-content {
-  position: relative;
-  background-color: #555555;
-  font-size: 1em;
-  text-align: center;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s
-}
-
-/* Add Animation */
-
-@-webkit-keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0
-  }
-  to {
-    top: 0;
-    opacity: 1
-  }
-}
-
-@keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0
-  }
-  to {
-    top: 0;
-    opacity: 1
-  }
+.list-group-item.list-group-item-action:focus, 
+.list-group-item.list-group-item-action.active, 
+.list-group-item.list-group-item-action:visited,
+.list-group:focus,
+.list-group.active,
+.list-group:visited {
+  border: none;
+  outline: none;
 }
 
 /* Using flex with the column direction to 
@@ -250,8 +228,8 @@ div.list-group-item i {
 }
 
 .track-art {
-  height: 200px;
-  width: 200px;
+  height: 120px;
+  width: 120px;
   background-image: URL("../images/uks1.png");
   background-position: center;
   background-size: cover;
@@ -275,6 +253,7 @@ div.list-group-item i {
 }
 
 .playpause-track, .prev-track, .next-track {
+  font-size: .5em;
   padding: 25px;
   opacity: 0.8;
   /* Smoothly transition the opacity */
@@ -284,7 +263,7 @@ div.list-group-item i {
 /* Change the opacity when mouse is hovered */
 
 .playpause-track:hover, .prev-track:hover, .next-track:hover {
-  opacity: 1.0;
+  opacity: 2.0;
 }
 
 /* Define the slider width so that it scales properly */
@@ -304,8 +283,8 @@ div.list-group-item i {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  background-color: #dddddd;
   height: 3px;
-  background: #11ff55;
   opacity: 0.7;
   -webkit-transition: .2s;
   transition: opacity .2s;
